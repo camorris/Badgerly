@@ -1,2 +1,10 @@
 <h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<%= form_tag sessions_path, {:class => ''} do %>
+<h1>Sign In</h1>
+<%= label_tag :email, 'Email', class: '' %>
+<%= text_field_tag :email, params[:email], class: '' %>
+<%= label_tag :password, 'Password', class: '' %>
+<%= password_field_tag :password, nil, class: '' %>
+<%= submit_tag 'Log in', class: '' %>
+<%= link_to "Don't have an account?", new_user_path, class: '' %>
+<% end %>

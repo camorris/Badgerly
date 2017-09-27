@@ -1,9 +1,5 @@
 
-<h1>Badge</h1>
-<%= form_for @badges do |f| %>
-    <%= f.text_field :course %>
-    <%= f.text_field :website %>
-    <%= f.text_field :date %>
-    <%= f.text_field :purpose %>
-    <%= f.submit "Find" %>
+<h1>Badges</h1>
+<% @badges.each do |badge| %>
+    
 <% end %>
