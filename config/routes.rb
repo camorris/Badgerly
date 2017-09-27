@@ -1,23 +1,31 @@
 Rails.application.routes.draw do
-  get 'users/index'
 
-  get 'users/show'
+  get 'sessions/new'
+  root 'badges#index'
+  resources :users
+  resources :sessions,  only: [:new, :create]
+  delete 'logout' => 'sessions#destroy', as: :logout
+  resources :units
+  
+  # get 'users/index'
 
-  get 'users/update'
+  # get 'users/show'
 
-  get 'users/create'
+  # get 'users/update'
 
-  get 'users/destroy'
+  # get 'users/create'
 
-  get 'badges/index'
+  # get 'users/destroy'
 
-  get 'badges/show'
+  # get 'badges/index'
 
-  get 'badges/create'
+  # get 'badges/show'
 
-  get 'badges/update'
+  # get 'badges/create'
 
-  get 'badges/destroy'
+  # get 'badges/update'
+
+  # get 'badges/destroy'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
