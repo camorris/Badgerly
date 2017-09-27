@@ -1,7 +1,7 @@
 class BadgesController < ApplicationController
   before_action :authorize, except: [:index, :show] 
   def index
-    @badges = current_user.badges
+   
   end
 
   def show

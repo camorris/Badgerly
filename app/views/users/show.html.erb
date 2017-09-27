@@ -11,5 +11,8 @@
         <% end %></li>
      <% end %>
 </ul>
+
+<%= link_to 'New Badge', new_badge_path %>
+<br />
 By: <%= link_to @user.name, user_path(@user) %>
 about <%= time_ago_in_words @user.created_at %> ago
