@@ -21,6 +21,7 @@ class UsersController < ApplicationController
       redirect_to badges_path
     else
       redirect_to new_user_path
+    end
   end
   def edit
   end
@@ -29,4 +30,5 @@ class UsersController < ApplicationController
   private 
   def user_params
     params.require(:user).permit(:name, :email, :password, :age, :password_confirmation)
+  end
 end
