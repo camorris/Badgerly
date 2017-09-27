@@ -1,2 +1,9 @@
-<h1>Badges#index</h1>
-<p>Find me in app/views/badges/index.html.erb</p>
+
+<h1>Badge</h1>
+<%= form_for @badges do |f| %>
+    <%= f.text_field :course %>
+    <%= f.text_field :website %>
+    <%= f.text_field :date %>
+    <%= f.text_field :purpose %>
+    <%= f.submit "Find" %>
+<% end %>

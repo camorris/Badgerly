@@ -1,0 +1,14 @@
+<h1>Elements#edit</h1>
+<%= form_for @element do |f| %>
+<%= f.text_field :course, {placeholder: "Course"} %>
+<br />
+<%= f.text_area :website, {placeholder: "Website"} %>
+<br />
+<%= f.text_field :date, {placeholder: "Date"} %>
+<br />
+<%= f.text_field :purpose, {placeholder: "Purpose"} %>
+<br />
+<%= f.submit %>
+<% end %>
+<%= link_to 'Cancel', element_path %>
+<%= link_to 'Delete', element_path, method: 'delete' %>
