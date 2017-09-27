@@ -21,11 +21,23 @@ class BadgesController < ApplicationController
       redirect_to new_badge_path
     end
   end
-
-  def update
+  def edit
+    @badge = Badge.find(params[:id])
   end
+ 
+  def update
+      @badge = Badge.find(params[:id])
+      if @badge.update(badge_params)
+        redirect_to badges_path
+      end
+  end
+  
 
   def destroy
+    @badge = Badge.find(params[:id])
+    if @badge.destroy
+      redirect_to user_path(current_user)
+    end
   end
 
   private

@@ -1,1 +1,15 @@
 <h1>Your Badges should go here</h1>
+<ul>
+     <% @user.badges.each do |t| %>
+        <li><%= t.course %></li>
+         <li><%=t.website %></li>
+         <li><%=t.date %></li>
+         <li><%= t.purpose %></li>
+        
+         <li>  <% if current_user == @user %>
+        <%= link_to 'Edit', edit_badge_path(t), method: 'get' %>
+        <% end %></li>
+     <% end %>
+</ul>
+By: <%= link_to @user.name, user_path(@user) %>
+about <%= time_ago_in_words @user.created_at %> ago
