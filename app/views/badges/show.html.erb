@@ -1,2 +1,12 @@
-<h1>Badges#show</h1>
-<p>Find me in app/views/badges/show.html.erb</p>
+<h1>Your Badges</h1>
+<!-- topic views -->
+<h2>Badge</h2> <%= link_to 'Create', new_badge_path, method: 'get' %>
+<ol>
+     <% @user.badges.each do |b| %>
+        <li><%= b.course %>: <%= b.website %>
+        <!-- Topic edit Button -->
+        <% if current_user == @user %>
+        <%= link_to 'Edit', edit_badge_path(t), method: 'get' %>
+        <% end %></li>
+     <% end %>
+</ol>
