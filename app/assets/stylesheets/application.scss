@@ -2,7 +2,10 @@
 
  .jumbotron-fluid {
      background: orange;
-    
+     height: 100%;
+     weight: 100%;
+    margin-top: 150px;
+    opacity: 0.4;
  }
     .display-3 {
         color: white;
@@ -15,7 +18,14 @@
     h1 {
         color: orange;
     }
-
+    .homepage {
+          background-image: image-url("honey-badger.jpg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 20%;
+          
+    }
+    .form-group{}
 // body {
 //     background-image: image-url("honey-badger.jpg");
 //     background-position: center;

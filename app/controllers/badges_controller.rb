@@ -39,7 +39,7 @@ class BadgesController < ApplicationController
   def destroy
     @badge = Badge.find(params[:id])
     if @badge.destroy
-      redirect_to user_path(current_user)
+      redirect_to badges_path
     end
   end
 

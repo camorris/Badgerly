@@ -1,0 +1,18 @@
+<h1>Badgery User</h1>
+<%= form_for @user do |f| %>
+<div class="form-group">
+<%= f.text_field :name, {placeholder: "Name", class: "form-control"} %>
+</div>
+<br />
+<div class="form-group">
+<%= f.text_area :email, {placeholder: "Email", class: "form-control"} %>
+</div>
+<br />
+<div class="form-group">
+<%= f.text_field :age, {placeholder: "Age", class: "form-control"} %>
+</div>
+<br />
+<%= f.submit class: 'btn btn-warning' %>
+<% end %>
+|<%= link_to 'Cancel', user_path(@user) %> |
+<%= link_to 'Delete', user_path, method: 'delete', data: {confirm: "Are You Sure You Want to do that?"} %>|
