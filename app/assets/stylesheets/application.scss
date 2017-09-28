@@ -1,19 +1,12 @@
  @import "bootstrap";
 
  .jumbotron-fluid {
-     background: orange;
+     background: rgba(128, 128, 128, 0.1);
      height: 100%;
      weight: 100%;
     margin-top: 150px;
-    opacity: 0.4;
+    
  }
-    .display-3 {
-        color: white;
-    }
-
-    .lead {
-        color: white;
-    }
 
     h1 {
         color: orange;
@@ -23,10 +16,16 @@
           background-repeat: no-repeat;
           background-position: center;
           background-size: 20%;
-          
+             
+    }
+    .display-3{
+        color: black;
+    }
+    .lead{
+        color: black;
     }
     .bg-light{
-        background-color:#CAC7C7 !important;
+        background-color:rgb(255, 254, 254) !important;
         opacity: 0.4;
     }
     .form-group{
