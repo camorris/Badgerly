@@ -13,6 +13,7 @@
       <%if logged_in? %>
       <%= link_to 'Log Out', logout_path, method: 'delete'%>
       <%= link_to current_user.name, user_path(current_user) %>
+      <%= link_to 'View My Badges', badges_path %>
       <% else %>
       <%= link_to 'Log In', new_session_path %>
       <% end %>
