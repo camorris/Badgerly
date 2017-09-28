@@ -1,11 +1,13 @@
+<div class="form-group">
 <h1>Badge</h1>
+</div>
 <%= form_for @badge do |f| %>
 <div class="form-group">
 <%= f.text_field :course, {placeholder: "Course", class: "form-control"} %>
 </div>
 <br />
 <div class="form-group">
-<%= f.text_area :website, {placeholder: "Website", class: "form-control"} %>
+<%= f.text_field :website, {placeholder: "Website", class: "form-control"} %>
 </div>
 <br />
 <div class="form-group">
@@ -16,7 +18,11 @@
 <%= f.text_field :purpose, {placeholder: "Purpose", class: "form-control"} %>
 </div>
 <br />
+<div class="form-group">
 <%= f.submit class: 'btn btn-warning' %>
+</div>
 <% end %>
+<div class="form-group">
 |<%= link_to 'Cancel', badge_path(@badge) %> |
 <%= link_to 'Delete', badge_path, method: 'delete', data: {confirm: "Are You Sure You Want to do that?"} %>|
+</div>
