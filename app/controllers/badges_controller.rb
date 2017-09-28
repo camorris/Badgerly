@@ -1,9 +1,11 @@
 class BadgesController < ApplicationController
   before_action :authorize, except: [:index, :show] 
   def index
+    @badges = current_user.badges
   end
 
   def show
+    @badge = Badge.find(params[:id])
   end
 
   def new
@@ -14,7 +16,7 @@ class BadgesController < ApplicationController
     @badge = Badge.new(badge_params)
     @badge.user = current_user
     if @badge.save
-      redirect_to user_path(current_user)
+      redirect_to badges_path
     else 
       redirect_to new_badge_path
     end
@@ -26,7 +28,7 @@ class BadgesController < ApplicationController
   def update
       @badge = Badge.find(params[:id])
       if @badge.update(badge_params)
-        redirect_to user_path(current_user)
+        redirect_to badge_path(@badge)
       else
         redirect_to edit_badge_path(@badge)
 

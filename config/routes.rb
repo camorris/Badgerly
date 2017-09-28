@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'welcome/home_page'
+
   get 'sessions/new'
-  root 'badges#index'
+  root 'welcome#home_page'
   resources :users
   resources :sessions,  only: [:new, :create]
   delete 'logout' => 'sessions#destroy', as: :logout
