@@ -1,10 +1,20 @@
-<h1>Badgery</h1>
+<h1>Sign Into Badgery</h1>
 <%= form_tag sessions_path, {:class => ''} do %>
-<h1>Sign In</h1>
+
+<div class="form-group">
 <%= label_tag :email, 'Email', class: '' %>
-<%= text_field_tag :email, params[:email], class: '' %>
+<%= text_field_tag :email, params[:email], class: 'form-control' %>
+</div>
+<div class="form-group">
 <%= label_tag :password, 'Password', class: '' %>
-<%= password_field_tag :password, nil, class: '' %>
-<%= submit_tag 'Log in', class: '' %>
+<%= password_field_tag :password, nil, class: 'form-control' %>
+</div>
+
+<%= submit_tag 'Log in', class: 'btn btn-warning' %>
 <%= link_to "Don't have an account?", new_user_path, class: '' %>
 <% end %>
+
+
+
+
+
