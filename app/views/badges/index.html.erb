@@ -1,8 +1,10 @@
+<div class="form-group">
 <h1>Checkout Your Badges</h1>
+</div>
 
-<div class="row">
+<div class="form-group">
     <% @badges.each do |b| %>
-        <div class="col-md-3 card" style="margin-right: 20px; width: 20rem;">
+        <div class="col-md-3 card" style="margin-right: 20px; width: 20rem; border-color: orange;">
             <div class="card-body">
                 <h4 class="card-title"><%= b.course %></h4>
                 <h6 class="card-subtitle mb-2 text-muted"><%=b.website %></h6>
@@ -13,7 +15,8 @@
         </div>
     <% end %> 
 </div>
-
+<div class="form-group">
 <%= link_to 'New Badge', new_badge_path %>
 <br />
 By: <%= link_to current_user.name, user_path(current_user) %>
+</div>
