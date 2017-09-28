@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect_to badges_path
+      redirect_to user_path(@user)
     else
       flash[:danger] = "Incorrect email or password"
       redirect_to new_session_path
