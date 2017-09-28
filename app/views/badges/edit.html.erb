@@ -10,5 +10,5 @@
 <br />
 <%= f.submit %>
 <% end %>
-<%= link_to 'Cancel', user_path(@badge) %>
+<%= link_to 'Cancel', user_path(@badge.user) %>
 <%= link_to 'Delete', badge_path, method: 'delete', data: {confirm: "Are You Sure You Want to do that?"} %>
