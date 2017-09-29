@@ -6,25 +6,30 @@
         <%= f.text_field :name, class: 'form-control' %>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
+
     <div class="form-group">
         <%= f.label :email, 'Email*' %>
         <%= f.text_field :email, class: 'form-control' %>
     </div>
+
     <div class="form-group">
         <%= f.label :age, 'Age*'%>
         <%= f.text_field :age, class: 'form-control' %>
     </div>
+
     <div class="form-group">
         <%= f.label :password, 'Password*' %>
         <%= f.password_field :password, class: 'form-control' %>
     </div>
+
     <div class="form-group">
         <%= f.label :password_confirmation, 'Confirm Password*' %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
     </div>
-<div class="form-group">
-    <%= f.submit 'Create Account', class: 'btn btn-warning' %>
-</div>
+
+    <div class="form-group">
+        <%= f.submit 'Create Account', class: 'btn btn-warning' %>
+    </div>
 
 <% end %>
 
