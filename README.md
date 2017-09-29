@@ -34,9 +34,11 @@ For this project I used Ruby on rails to create the source code for this app. Pl
  For the project I would like to add a social aspect to the app that allows new developers to interact with employers and senior developers. In addition I would like to be able to link accounts from learning websites onto Badgerly.
 
 ### Assisted By 
-
-uxpin.com
-
+This link was where I created my ERD design
+wwww.uxpin.com
+This link is where I go tmy badger image
+https://www.google.com/search?q=honey+badger+cartoon&rlz=1C5CHFA_enUS739US741&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi4qoHi6crWAhUG6mMKHWjaB6UQ_AUICigB&biw=1594&bih=817#imgrc=ywjaqlUYlMbRfM:
+This site I referred to for assistance with my code
 https://stackoverflow.com/questions/1992019/how-can-i-rename-a-database-column-in-a-ruby-on-rails-migration
 
 Big Shout outs to Jimmy and Phillippe Chakrit, Harold, Kevin, Dave and Andrew all the assistance.
