@@ -1,4 +1,4 @@
-#Badgerly :trophy:
+# Badgerly :trophy:
 https://badgerly.herokuapp.com/
 
 ## Objective
