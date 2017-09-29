@@ -28,7 +28,9 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to new_badge_path
     else
+      validation_error_messages(@user)
       redirect_to new_user_path
+
     end
   end
   def edit
@@ -41,6 +43,16 @@ class UsersController < ApplicationController
   end
   
   private 
+  def validation_error_messages(user)
+    if user.errors.any?
+      errors = "<ul>"
+      user.errors.full_messages.each do |message|
+        errors += "<li>#{message}</li>"
+      end
+    end
+    errors += "</ul>"
+    flash[:error] = errors
+  end
   def user_params
     params.require(:user).permit(:name, :email, :password, :age, :password_confirmation)
   end

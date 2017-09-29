@@ -18,7 +18,9 @@ class BadgesController < ApplicationController
     if @badge.save
       redirect_to badges_path
     else 
+      validation_error_messages(@badge)
       redirect_to new_badge_path
+
     end
   end
   def edit
@@ -44,7 +46,18 @@ class BadgesController < ApplicationController
   end
 
   private
-  def badge_params
+  def validation_error_messages(badge)
+    if badge.errors.any?
+      errors = "<ul>"
+      badge.errors.full_messages.each do |message|
+        errors += "<li>#{message}</li>"
+      end
+    end
+    errors += "</ul>"
+    flash[:error] = errors
+  end
+
+        def badge_params
     params.require(:badge).permit(:course, :website, :date, :purpose)
   end
 end

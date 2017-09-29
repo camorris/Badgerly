@@ -1,47 +1,57 @@
- @import "bootstrap";
-
+//  This always the developer to style features from bootstrap
+ @import "bootstrap"; 
+// This is responsible for the design of the jumbo-tron you see on the homepage
  .jumbotron-fluid {
+     
      background: rgba(128, 128, 128, 0.1);
      height: 100%;
      weight: 100%;
     margin-top: 150px;
     
  }
+ 
+.messages{
 
-    h1 {
-        color: orange;
+    color: red;
+
+}
+// This makes all h1 tags through the app the color orange
+ h1 {
+
+    color: orange;
     }
-    .homepage {
-          background-image: image-url("honey-badger.jpg");
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 20%;
+// This allows the image of badger to appear once and behind the jumbo-tron
+.homepage {
+          
+ background-image: image-url("honey-badger.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: 20%;
              
+}
+// This turns the color of the jumbo tron text to black 
+.display-3{
+
+    color: black;
     }
-    .display-3{
-        color: black;
+.lead{
+
+    color: black;
     }
-    .lead{
-        color: black;
+// This changesa the style of nav bar
+.bg-light{
+
+    background-color:rgb(255, 254, 254) !important;
+    opacity: 0.4;
     }
-    .bg-light{
-        background-color:rgb(255, 254, 254) !important;
-        opacity: 0.4;
-    }
-    .form-group{
-        margin: 0px 60px 20px 60px;
+// This will adjust the forms through the app
+.form-group{
+        
+    margin: 0px 60px 20px 60px;
     }
 
-    .user-group{
-        margin: 100px 100px 100px 100px;
+.user-group{
+    
+    margin: 100px 100px 100px 100px;
 
     }
-// body {
-//     background-image: image-url("honey-badger.jpg");
-//     background-position: center;
-
-// }
-
-// img {
-//     height: 100%
-// }
