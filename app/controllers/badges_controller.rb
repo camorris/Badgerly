@@ -13,8 +13,8 @@ class BadgesController < ApplicationController
   end
 
   def create
-    @badge = Badge.new(badge_params)
-    @badge.user = current_user
+    @badge = current_user.badges.new(badge_params)
+    # @badge.user = current_user
     if @badge.save
       redirect_to badges_path
     else 
