@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  # These line of code determine the actions users can tkae on the website
   def index
 
   end

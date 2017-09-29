@@ -44,7 +44,7 @@ class BadgesController < ApplicationController
       redirect_to badges_path
     end
   end
-
+  # these lines of code define the method to have a errors messages pop up 
   private
   def validation_error_messages(badge)
     if badge.errors.any?
@@ -56,7 +56,7 @@ class BadgesController < ApplicationController
     errors += "</ul>"
     flash[:error] = errors
   end
-
+# these lines of code make users enter in this information
         def badge_params
     params.require(:badge).permit(:course, :website, :date, :purpose)
   end
