@@ -4,7 +4,7 @@ class CreateBadges < ActiveRecord::Migration[5.1]
       t.string :course
       t.string :website
       t.string :date
-      t.text :purpose
+      t.text :prupose
 
       t.timestamps
     end
